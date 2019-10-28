@@ -1,14 +1,14 @@
 //
-//  FirstViewController.swift
+//  SettingsViewController.swift
 //  WhoWantsToBeAMillioner
 //
-//  Created by Olga Melnik on 15.10.2019.
+//  Created by Olga Melnik on 27.10.2019.
 //  Copyright © 2019 Olga Melnik. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
