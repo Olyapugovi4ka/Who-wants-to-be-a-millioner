@@ -27,7 +27,7 @@ import Foundation
         
     }
      func loadGameSession() -> GameSession {
-         guard let data = UserDefaults.standard.data(forKey: keyForGameSession) else { return GameSession(gameEndAtIndex: 0, countOfQuestions: 0)}
+        guard let data = UserDefaults.standard.data(forKey: keyForGameSession) else { return GameSession(gameEndAtIndex: 0, countOfQuestions: 0)}
              return try! decoder.decode(GameSession.self, from: data)
      }
     

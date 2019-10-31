@@ -10,13 +10,17 @@ import Foundation
 
 
 class GameSession: Codable {
-    
-    var gameEndAtIndex: Int
     var countOfQuestions: Int
+    var gameEndAtIndex: Int
+   
     
-    init(gameEndAtIndex: Int, countOfQuestions: Int){
+    init(gameEndAtIndex: Int , countOfQuestions: Int){
+      
         self.gameEndAtIndex = gameEndAtIndex
         self.countOfQuestions = countOfQuestions
+      
+       
+        
     }
     
     

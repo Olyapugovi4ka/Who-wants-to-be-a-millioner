@@ -7,3 +7,9 @@
 //
 
 import Foundation
+enum Order: String, Codable {
+    
+    
+    case ordinary = "ordinary"
+    case random = "random"
+}

@@ -21,21 +21,29 @@ class FirstViewController: UIViewController {
         if segue.identifier == "startToPlay" {
             guard let destination = segue.destination as? ViewController else { return }
             destination.viewControllerDelegate = self
-             let gameSession = RecordsCaretaker().loadGameSession()
-                destination.indexOfQuestion = gameSession.gameEndAtIndex
-                print(destination.indexOfQuestion)
-            
-
+            //let gameSession = RecordsCaretaker().loadGameSession()
+           // destination.indexOfQuestion = gameSession.gameEndAtIndex
+            destination.order = Game.shared.order
+            print(Game.shared.order)
+            print(destination.indexOfQuestion)
         }
     }
+    
+
 
 }
 extension FirstViewController: ViewControllerDelegate{
     func didFinishGame(_ gameSession: GameSession) {
-         RecordsCaretaker().saveGameSession(gameSession)
+        // RecordsCaretaker().saveGameSession(gameSession)
+        Game.shared.findPercent(gameSession)
+        RecordsCaretaker().saveResults(Game.shared.results)
+        
+        Game.shared.clearGameSession()
         print("Всего вопросов: \(gameSession.countOfQuestions)" , ", ","получено ответов: \(gameSession.gameEndAtIndex)")
     }
     
     
 }
+
+
 

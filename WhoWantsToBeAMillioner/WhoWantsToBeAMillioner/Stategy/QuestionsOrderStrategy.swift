@@ -1,5 +1,5 @@
 //
-//  ShowQuestionStrategy.swift
+//  QuestionsOrderStrategy.swift
 //  WhoWantsToBeAMillioner
 //
 //  Created by Olga Melnik on 27.10.2019.
@@ -9,7 +9,6 @@
 import Foundation
 protocol QuestionsOrderStrategy {
    
-    func showArrayOfQuestions(_ questions: [String]) -> [String]
-    
-    
+    func showArrayOfQuestions(_ questions: [Question]) -> [Question]
+   
 }

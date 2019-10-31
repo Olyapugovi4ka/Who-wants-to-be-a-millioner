@@ -1,5 +1,5 @@
 //
-//  RandomShowQuestion.swift
+//  RandomOrderStrategy.swift
 //  WhoWantsToBeAMillioner
 //
 //  Created by Olga Melnik on 27.10.2019.
@@ -8,14 +8,17 @@
 
 import Foundation
 
-final class RandomShowQuestion: QuestionsOrderStrategy {
-    func showArrayOfQuestions(_ questions: [String]) -> [String] {
-        var questions = questions
-        var newArrayOfQuestions: [String] = []
-        for _ in 0 ..< questions.count {
-            let index = Int.random(in: 0..<questions.count)
-            newArrayOfQuestions.append(questions[index])
-            questions.remove(at: index)
+final class RandomOrderStrategy: QuestionsOrderStrategy {
+    
+    func showArrayOfQuestions(_ questions: [Question]) -> [Question] {
+        
+        var newQuestions = questions
+        var newArrayOfQuestions: [Question] = []
+        
+        for _ in 0 ..< newQuestions.count {
+            let index = Int.random(in: 0 ..< newQuestions.count)
+            newArrayOfQuestions.append(newQuestions[index])
+            newQuestions.remove(at: index)
         }
         return newArrayOfQuestions
     }

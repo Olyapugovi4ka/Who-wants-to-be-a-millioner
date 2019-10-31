@@ -1,5 +1,5 @@
 //
-//  SequentialOrder.swift
+//  SequentialOrderStrategy.swift
 //  WhoWantsToBeAMillioner
 //
 //  Created by Olga Melnik on 27.10.2019.
@@ -7,8 +7,9 @@
 //
 
 import Foundation
-final class SequentialOrder: QuestionsOrderStrategy {
-    func showArrayOfQuestions(_ questions: [String]) -> [String] {
+final class SequentialOrderStrategy: QuestionsOrderStrategy {
+    
+    func showArrayOfQuestions(_ questions: [Question]) -> [Question] {
         return questions
     }
     

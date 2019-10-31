@@ -8,23 +8,40 @@
 
 import UIKit
 
+
 class SettingsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var chooseOrderControl: UISegmentedControl!
+    
+ private var selectedOrder : Order {
 
-        // Do any additional setup after loading the view.
+        switch chooseOrderControl.selectedSegmentIndex {
+        case 0:
+            return .ordinary
+        case 1:
+            return .random
+        default:
+            return .ordinary
+
+            
+        }
+    
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        chooseOrderControl.addTarget(self, action: #selector(saveSelectedOrder), for: .valueChanged)
+        
     }
-    */
-
+    
+    @objc func saveSelectedOrder(){
+        Game.shared.order = selectedOrder
+    }
+    
+    @IBAction func returnButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
