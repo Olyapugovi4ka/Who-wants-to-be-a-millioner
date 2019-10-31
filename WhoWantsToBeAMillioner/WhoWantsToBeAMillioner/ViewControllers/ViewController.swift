@@ -53,9 +53,16 @@ class ViewController: UIViewController {
         
         questions = questionsOrderStrategy.showArrayOfQuestions(self.questions)
         
+        //MARK: - add observer for index of questionn
         indexOfQuestion.addObserver(self, options: [.new, .initial]) { [weak self](newValue, _) in
+            guard let questionsCount = self?.questions.count else { return }
+            if (self?.indexOfQuestion.value)! < questionsCount {
             let currentIndex = newValue + 1
-            self?.currentQuestionLabel.text = "Вопрос номер \(currentIndex) из \(String(describing: self?.questions.count))"
+            self?.currentQuestionLabel.text = "Вопрос номер \(currentIndex) из \(questionsCount)"
+            } else {
+                self!.indexOfQuestion.removeObserver(self!.indexOfQuestion)
+                self!.currentQuestionLabel.isHidden = true
+            }
         }
         
         
@@ -65,14 +72,10 @@ class ViewController: UIViewController {
                                   countOfQuestions: questions.count)
        
         Game.shared.gameSession = gameSession
-        //showCurrentQuestion(indexOfQuestion.value, countOfQuestion.value)
+        
        
     }
-    
-//    func showCurrentQuestion(_ indexOfCurrentQuestion: Int, _ countOfQuestions: Int ) {
-//        currentQuestionLabel.text = "Вопрос номер \(indexOfCurrentQuestion) из \(countOfQuestions)"
-//    }
-    
+ 
     func showQuestionAtIndex(_ index: Int) {
        
         let question = questions[index]

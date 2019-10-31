@@ -10,9 +10,9 @@ import UIKit
 
 class CustomCell: UITableViewCell {
     
-    
-    @IBAction func textField(_ sender: UITextField) {
-    }
+   
+    @IBOutlet weak var textInput: UITextField!
+   
     
 
     override func awakeFromNib() {

@@ -214,9 +214,6 @@
                                                     <rect key="frame" x="15" y="11" width="345" height="108"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <action selector="textField:" destination="FbM-9q-yEE" eventType="editingDidEnd" id="6Mm-Fb-xfr"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -261,9 +258,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKV-uE-VSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="FbM-9q-yEE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1279.2" y="839.73013493253382"/>
+            <point key="canvasLocation" x="-1186" y="677"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="jMz-IW-B6m">

@@ -18,6 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+       RecordsCaretaker().saveGameSession(Game.shared.gameSession!)
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        RecordsCaretaker().loadGameSession()
+    }
+//    func applicationWillTerminate(_ application: UIApplication) {
+//        <#code#>
+//    }
 //    func applicationDidFinishLaunching(_ application: UIApplication) {
 //        Game.shared.addResults(RecordsCaretaker().loadResults())
 //    }
