@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
-       RecordsCaretaker().saveGameSession(Game.shared.gameSession!)
+      
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        RecordsCaretaker().loadGameSession()
+  
     }
 //    func applicationWillTerminate(_ application: UIApplication) {
 //        <#code#>

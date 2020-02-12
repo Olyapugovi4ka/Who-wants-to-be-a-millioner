@@ -8,13 +8,13 @@
 
 import Foundation
 class Question {
-    let question: String
-    let answer1: String
-    let answer2: String
-    let answer3: String
-    let answer4: String
+    var question: String
+    var answer1: String
+    var answer2: String
+    var answer3: String
+    var answer4: String
     
-    let rightAnswer: String
+    var rightAnswer: String
     init (question: String, answer1: String, answer2: String, answer3: String, answer4: String, rightAnswer: String){
         self.question = question
         self.answer1 = answer1

@@ -7,3 +7,13 @@
 //
 
 import Foundation
+protocol Presenter {
+    var messageInfo: String { get }
+}
+
+class CatalogPresenter {
+    weak var viewController: CataloViewController?
+    var messageInfo = "Создать viewModel для представления"
+    
+    
+}

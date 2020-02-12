@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+protocol Interactor {
+    init(presenter: Presenter)
+    
+}
+
+class CatalogInteractor {
+    
+}

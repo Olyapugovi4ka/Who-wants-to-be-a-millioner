@@ -21,8 +21,8 @@ class FirstViewController: UIViewController {
         if segue.identifier == "startToPlay" {
             guard let destination = segue.destination as? ViewController else { return }
             destination.viewControllerDelegate = self
-            //let gameSession = RecordsCaretaker().loadGameSession()
-           // destination.indexOfQuestion = gameSession.gameEndAtIndex
+            if Game.shared.gameSession != nil {
+                destination.indexOfQuestion.value = Game.shared.gameSession!.gameEndAtIndex }
             destination.order = Game.shared.order
             print(Game.shared.order)
             print(destination.indexOfQuestion)

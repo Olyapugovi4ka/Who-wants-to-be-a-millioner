@@ -203,26 +203,102 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewQuestionCell" rowHeight="130" id="tXe-gx-54t">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="130"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewQuestionCell" rowHeight="416" id="tXe-gx-54t" customClass="CustomCell" customModule="WhoWantsToBeAMillioner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="416"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tXe-gx-54t" id="XE3-AT-qk0" customClass="CustomCell" customModule="WhoWantsToBeAMillioner" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="416"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDi-Wb-qx7">
-                                                    <rect key="frame" x="15" y="11" width="345" height="108"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-vU-8IL">
+                                                    <rect key="frame" x="0.0" y="10" width="375" height="386"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите новый вопрос" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2n-un-ow0">
+                                                            <rect key="frame" x="96" y="0.0" width="183" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2za-qd-VFI">
+                                                            <rect key="frame" x="16" y="34" width="343" height="33"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textField>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите правильный ответ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZh-mz-iPR">
+                                                            <rect key="frame" x="79.5" y="81" width="216" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29g-Kp-T6l">
+                                                            <rect key="frame" x="16" y="114.5" width="343" height="33"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textField>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите неправильный ответ 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-m0-55e">
+                                                            <rect key="frame" x="64" y="161.5" width="247" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfx-hi-PFl">
+                                                            <rect key="frame" x="16" y="195.5" width="343" height="33"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textField>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите неправильный ответ 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOX-de-WU9">
+                                                            <rect key="frame" x="63" y="242.5" width="249.5" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZd-8f-SDw">
+                                                            <rect key="frame" x="16" y="276" width="343" height="33"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textField>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите неправильный ответ 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hg2-gF-q3c">
+                                                            <rect key="frame" x="63" y="323" width="249.5" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKc-pd-Lff">
+                                                            <rect key="frame" x="16" y="357" width="343" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textField>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="29g-Kp-T6l" firstAttribute="trailing" secondItem="2za-qd-VFI" secondAttribute="trailing" id="1j0-Rp-i0k"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2za-qd-VFI" secondAttribute="trailing" constant="16" id="6Np-vG-5B9"/>
+                                                        <constraint firstItem="tfx-hi-PFl" firstAttribute="leading" secondItem="29g-Kp-T6l" secondAttribute="leading" id="I4I-sA-uBu"/>
+                                                        <constraint firstItem="eKc-pd-Lff" firstAttribute="trailing" secondItem="wZd-8f-SDw" secondAttribute="trailing" id="Ohp-4h-65r"/>
+                                                        <constraint firstItem="tfx-hi-PFl" firstAttribute="trailing" secondItem="29g-Kp-T6l" secondAttribute="trailing" id="aBs-hJ-mTC"/>
+                                                        <constraint firstItem="wZd-8f-SDw" firstAttribute="leading" secondItem="tfx-hi-PFl" secondAttribute="leading" id="db3-Sk-Rh5"/>
+                                                        <constraint firstItem="29g-Kp-T6l" firstAttribute="leading" secondItem="2za-qd-VFI" secondAttribute="leading" id="gGo-VH-bjJ"/>
+                                                        <constraint firstItem="2za-qd-VFI" firstAttribute="leading" secondItem="PKF-vU-8IL" secondAttribute="leading" constant="16" id="iJt-iz-COZ"/>
+                                                        <constraint firstItem="wZd-8f-SDw" firstAttribute="trailing" secondItem="tfx-hi-PFl" secondAttribute="trailing" id="iov-Ph-tcl"/>
+                                                        <constraint firstItem="eKc-pd-Lff" firstAttribute="leading" secondItem="wZd-8f-SDw" secondAttribute="leading" id="pWw-Z3-H9g"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.42003319300000003" green="0.2344754091" blue="0.2746228107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="nDi-Wb-qx7" secondAttribute="bottom" id="UMw-wh-TLt"/>
-                                                <constraint firstItem="nDi-Wb-qx7" firstAttribute="leading" secondItem="XE3-AT-qk0" secondAttribute="leadingMargin" id="eOj-NZ-LHk"/>
-                                                <constraint firstItem="nDi-Wb-qx7" firstAttribute="top" secondItem="XE3-AT-qk0" secondAttribute="topMargin" id="sbB-wj-eTB"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="nDi-Wb-qx7" secondAttribute="trailing" id="uWm-Fa-Laz"/>
+                                                <constraint firstAttribute="bottom" secondItem="PKF-vU-8IL" secondAttribute="bottom" constant="20" id="53r-8v-SPf"/>
+                                                <constraint firstItem="PKF-vU-8IL" firstAttribute="leading" secondItem="XE3-AT-qk0" secondAttribute="leading" id="LlJ-Mk-fOn"/>
+                                                <constraint firstAttribute="trailing" secondItem="PKF-vU-8IL" secondAttribute="trailing" id="X0j-eo-tah"/>
+                                                <constraint firstItem="PKF-vU-8IL" firstAttribute="top" secondItem="XE3-AT-qk0" secondAttribute="top" constant="10" id="znm-5a-51K"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.42003319300000003" green="0.2344754091" blue="0.2746228107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="questionTextField" destination="2za-qd-VFI" id="M9Y-kg-EhK"/>
+                                            <outlet property="rightAnswerTextField" destination="29g-Kp-T6l" id="iir-lq-EpA"/>
+                                            <outlet property="wrongAnswerTextField1" destination="tfx-hi-PFl" id="vYR-Q9-YBM"/>
+                                            <outlet property="wrongAnswerTextField2" destination="wZd-8f-SDw" id="GDT-OF-SJ6"/>
+                                            <outlet property="wrongAnswerTextField3" destination="eKc-pd-Lff" id="IO5-PG-ac9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -259,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKV-uE-VSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1186" y="677"/>
+            <point key="canvasLocation" x="-1186.4000000000001" y="676.91154422788611"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="jMz-IW-B6m">

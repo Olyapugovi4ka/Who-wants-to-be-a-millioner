@@ -11,10 +11,13 @@ import UIKit
 class CustomCell: UITableViewCell {
     
    
-    @IBOutlet weak var textInput: UITextField!
-   
+    @IBOutlet weak var questionTextField: UITextField!
+    @IBOutlet weak var rightAnswerTextField: UITextField!
     
-
+    @IBOutlet weak var wrongAnswerTextField1: UITextField!
+    @IBOutlet weak var wrongAnswerTextField2: UITextField!
+    
+    @IBOutlet weak var wrongAnswerTextField3: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         
